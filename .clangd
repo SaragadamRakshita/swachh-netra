@@ -1,0 +1,10 @@
+CompileFlags:
+  CompilationDatabase: .
+
+---
+If:
+  PathMatch: .*\.ino
+CompileFlags:
+  Add: [-xc++, -ferror-limit=0]
+Diagnostics:
+  Suppress: ["*"]

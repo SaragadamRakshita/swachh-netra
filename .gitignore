@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+ENV/
+env/
+
+# Databases & local configs
+*.db
+*.sqlite3
+.env
+.env.*
+!.env.example
+
+# Firebase & Service Account Keys (Private Credentials)
+*serviceAccountKey*.json
+*adminsdk*.json
+backend/*.json
+!backend/serviceAccountKey.json.placeholder
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System Files
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Compile Commands / Caches
+.cache/
+compile_commands.json

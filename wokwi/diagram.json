@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "author": "CleanCity",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 15, "left": 50, "attrs": {} },
+    { "type": "wokwi-dht22", "id": "dht", "top": -120, "left": -80, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot_nh3", "top": 200, "left": -220, "attrs": { "label": "MQ-137 NH3 (Ammonia)" } },
+    { "type": "wokwi-potentiometer", "id": "pot_voc", "top": 320, "left": -220, "attrs": { "label": "MQ-135 VOC" } },
+    { "type": "wokwi-pushbutton", "id": "btn_door", "top": 140, "left": 250, "attrs": { "label": "Door Entry Push Button" } },
+    { "type": "wokwi-slide-switch", "id": "sw_water", "top": 250, "left": 250, "attrs": { "label": "Water Flow Sensor Switch" } }
+  ],
+  "connections": [
+    [ "esp:GND.1", "dht:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "dht:VCC", "red", [ "v0" ] ],
+    [ "esp:15", "dht:SDA", "green", [ "v0" ] ],
+
+    [ "esp:GND.1", "pot_nh3:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "pot_nh3:VCC", "red", [ "v0" ] ],
+    [ "esp:34", "pot_nh3:SIG", "green", [ "v0" ] ],
+
+    [ "esp:GND.1", "pot_voc:GND", "black", [ "v0" ] ],
+    [ "esp:3V3", "pot_voc:VCC", "red", [ "v0" ] ],
+    [ "esp:35", "pot_voc:SIG", "green", [ "v0" ] ],
+
+    [ "esp:GND.1", "btn_door:1.1", "black", [ "v0" ] ],
+    [ "esp:12", "btn_door:2.1", "blue", [ "v0" ] ],
+
+    [ "esp:GND.1", "sw_water:1", "black", [ "v0" ] ],
+    [ "esp:14", "sw_water:2", "blue", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}

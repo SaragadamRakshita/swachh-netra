@@ -1,0 +1,27 @@
+# CleanCity IoT Backend — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# ── Web Framework ──
+fastapi>=0.111.0
+uvicorn[standard]>=0.29.0
+
+# ── Database ──
+aiosqlite>=0.20.0          # Async SQLite (dev/POC)
+
+# ── Validation ──
+pydantic>=2.7.1
+
+# ── Auth ──
+PyJWT>=2.8.0
+python-multipart>=0.0.9    # Form data support
+
+# ── Utilities ──
+python-dotenv>=1.0.1       # .env file support
+
+# ── Testing ──
+pytest>=8.2.0
+pytest-asyncio>=0.23.6
+httpx>=0.27.0              # Async test client for FastAPI
+
+# ── Firebase ──
+firebase-admin>=6.5.0

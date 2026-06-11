@@ -1,0 +1,28 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=cleancity.db
+      - SECRET_KEY=cleancity-gvmc-vizag-secret-CHANGE-ME
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+
+  # Uncomment below to use PostgreSQL instead of SQLite
+  # db:
+  #   image: postgres:16
+  #   environment:
+  #     POSTGRES_DB: cleancity
+  #     POSTGRES_USER: cleancity
+  #     POSTGRES_PASSWORD: cleancity_pass
+  #   ports:
+  #     - "5432:5432"
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+
+# volumes:
+#   pgdata:

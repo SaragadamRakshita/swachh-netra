@@ -1,0 +1,10 @@
+# Environment & secrets — NEVER commit these
+.env
+serviceAccountKey.json
+*.db
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.venv/
+venv/
